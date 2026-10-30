@@ -1,0 +1,22 @@
+@import '@fontsource-variable/bricolage-grotesque';
+@import '@fontsource-variable/public-sans';
+@tailwind base; @tailwind components; @tailwind utilities;
+
+@layer base {
+  html { background: #FBFAF7; color: #14202B; -webkit-text-size-adjust: 100%; }
+  body { font-family: 'Public Sans Variable', system-ui, sans-serif; line-height: 1.55; }
+  h1, h2, h3 { font-family: 'Bricolage Grotesque Variable', system-ui, sans-serif; letter-spacing: -0.015em; line-height: 1.15; }
+  :focus-visible { outline: 3px solid #4A4FD6; outline-offset: 2px; border-radius: 6px; }
+  ::selection { background: #CFEAE5; }
+}
+@layer components {
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-[15px] font-semibold transition-colors disabled:cursor-not-allowed disabled:opacity-50 min-h-[44px]; }
+  .btn-primary { @apply btn bg-teal-600 text-white hover:bg-teal-700; }
+  .btn-quiet { @apply btn border border-line bg-white text-ink hover:bg-teal-50; }
+  .btn-danger { @apply btn border border-bad/40 bg-white text-bad hover:bg-red-50; }
+  .card { @apply rounded-2xl border border-line bg-card; }
+  .input { @apply w-full rounded-xl border border-line bg-white px-3 py-2.5 text-[15px] min-h-[44px] placeholder:text-mute/70; }
+  .label { @apply mb-1 block text-sm font-semibold; }
+  .hint { @apply text-sm text-mute; }
+}
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }

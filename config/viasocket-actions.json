@@ -1,0 +1,112 @@
+{
+  "_readme": "Fill 'event' (an action_id or page path) and the input/output mappings from `npm run discover:actions`. Nothing here is guessed: until an operation has an 'event', the app shows it as 'needs setup' and will not run it. Placeholders: {{name}} inside strings; a string that is exactly one placeholder keeps its value's type.",
+  "services": {
+    "calendar": {
+      "slug": "google-calendar",
+      "label": "Google Calendar"
+    },
+    "sheets": {
+      "slug": "google-sheets",
+      "label": "Google Sheets"
+    },
+    "gmail": {
+      "slug": "gmail",
+      "label": "Gmail"
+    }
+  },
+  "operations": {
+    "calendar.getEvent": {
+      "service": "calendar",
+      "event": "",
+      "input": {},
+      "output": {
+        "start": "",
+        "end": "",
+        "title": ""
+      }
+    },
+    "calendar.updateEvent": {
+      "service": "calendar",
+      "event": "",
+      "input": {},
+      "output": {}
+    },
+    "calendar.listEvents": {
+      "service": "calendar",
+      "event": "",
+      "input": {},
+      "output": {
+        "items": "",
+        "id": "",
+        "title": "",
+        "start": "",
+        "end": ""
+      }
+    },
+    "sheets.findEventRow": {
+      "service": "sheets",
+      "event": "",
+      "input": {},
+      "output": {
+        "start": "",
+        "end": ""
+      }
+    },
+    "sheets.updateEventRow": {
+      "service": "sheets",
+      "event": "",
+      "input": {},
+      "output": {}
+    },
+    "sheets.listRows": {
+      "service": "sheets",
+      "event": "",
+      "input": {},
+      "output": {
+        "rows": ""
+      }
+    },
+    "gmail.sendEmail": {
+      "service": "gmail",
+      "event": "",
+      "input": {},
+      "output": {
+        "messageRef": ""
+      }
+    },
+    "gmail.findSent": {
+      "service": "gmail",
+      "event": "",
+      "optional": true,
+      "input": {},
+      "output": {
+        "items": "",
+        "messageRef": ""
+      }
+    }
+  },
+  "options": {
+    "calendars": {
+      "operation": "calendar.getEvent",
+      "fieldKey": "",
+      "parentKey": ""
+    },
+    "calendarEvents": {
+      "operation": "calendar.getEvent",
+      "fieldKey": "",
+      "parentKey": "",
+      "_note": "parentKey = the dotted field name this action uses for the calendar (e.g. \"calendar_id\"), copied from `npm run discover:actions`"
+    },
+    "spreadsheets": {
+      "operation": "sheets.listRows",
+      "fieldKey": "",
+      "parentKey": ""
+    },
+    "sheetTabs": {
+      "operation": "sheets.listRows",
+      "fieldKey": "",
+      "parentKey": ""
+    }
+  },
+  "sheetTimeFormat": "iso-with-offset"
+}
